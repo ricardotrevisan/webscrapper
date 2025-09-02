@@ -9,8 +9,9 @@ server.get('/', async (request, response) => {
     
     const content =  await page.evaluate(()=>{
         return{
-            title: document.querySelector('span h3').innerHTML,
+            title: document.querySelector('span').innerHTML,
             description: document.querySelector('.wrapper p').innerHTML
+
         }
     })
     
